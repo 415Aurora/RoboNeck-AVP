@@ -1,0 +1,14 @@
+{
+  "current": {
+    "pitch_max_step": 2261,
+    "pitch_min_step": 1360,
+    "yaw_max_step": 3578,
+    "yaw_min_step": 1590
+  },
+  "previous": {
+    "pitch_max_step": 4095,
+    "pitch_min_step": 0,
+    "yaw_max_step": 4095,
+    "yaw_min_step": 0
+  }
+}

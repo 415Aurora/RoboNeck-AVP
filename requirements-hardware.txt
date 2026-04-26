@@ -1,0 +1,3 @@
+opencv-python>=4.8
+PyQt6>=6.5
+dynamixel_sdk>=3.7

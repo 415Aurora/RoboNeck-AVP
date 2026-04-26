@@ -1,0 +1,10 @@
+{
+  "current": {
+    "pitch_center_step": 1698,
+    "yaw_center_step": 2291
+  },
+  "previous": {
+    "pitch_center_step": 2048,
+    "yaw_center_step": 2048
+  }
+}
