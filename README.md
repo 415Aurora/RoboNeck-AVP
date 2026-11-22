@@ -4,6 +4,12 @@
 
 A Python control-and-diagnostics application mapping Apple Vision Pro head orientation to a two-axis Dynamixel robotic neck. It combines head-pose retargeting, calibration and motion constraints with a PyQt6 operator console.
 
+## Control architecture
+
+![Apple Vision Pro head-pose acquisition, freshness checks, retargeting, bounded control and Dynamixel output](docs/visuals/control-pipeline.svg)
+
+*High-level control schematic; quantitative real-hardware latency has not yet been established in this README.*
+
 ## Engineering contributions to inspect
 
 - **Retargeting and bounded control:** yaw/pitch mapping, deadzone, soft limits and incremental command constraints — see [core implementation](src/core/).
