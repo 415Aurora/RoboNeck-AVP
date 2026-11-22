@@ -1,3 +1,27 @@
+# RoboNeck-AVP — XR Head-Pose Retargeting and Safe Robot Neck Control
+
+**Project portfolio overview (English)**
+
+A Python control-and-diagnostics application mapping Apple Vision Pro head orientation to a two-axis Dynamixel robotic neck. It combines head-pose retargeting, calibration and motion constraints with a PyQt6 operator console.
+
+## Engineering contributions to inspect
+
+- **Retargeting and bounded control:** yaw/pitch mapping, deadzone, soft limits and incremental command constraints — see [core implementation](src/core/).
+- **Safety and lifecycle:** controller hold/fault behavior, readiness and stale-input checks — see [runtime and controller tests](tests/).
+- **Calibration:** mechanical center and tracking-start pose management — see [configuration](config/) and [calibration tests](tests/test_mechanical_center.py).
+- **Operator tooling:** PyQt6 monitoring, camera/connection diagnostics and control panels — see [GUI implementation](src/gui/).
+- **No-hardware regression path:** `MOCK_AVP=1 MOCK_MOTORS=1 python src/main.py`, then `pytest -q` for software checks. These commands are documented; no hardware performance figures are asserted here.
+
+## Reproducibility and limitations
+
+The basic software dependencies are listed in [requirements.txt](requirements.txt). Real AVP ingestion additionally depends on `VisionProTeleop` / `avp_stream` (currently referenced via a sibling-directory editable install), while device operation depends on compatible Dynamixel hardware and, optionally, ZED SDK. The mock path is the best starting point without hardware.
+
+**Evidence still to add:** a project-recorded end-to-end video, measured input-to-actuation delay/control update rate and reproducible real-hardware validation. Do not interpret unit tests as evidence of measured real-time latency.
+
+The README below retains the project's existing Chinese/English setup and diagnostic instructions.
+
+---
+
 # RoboNeck-AVP
 
 中文 | [English](#english)
